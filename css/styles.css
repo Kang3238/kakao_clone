@@ -1,0 +1,21 @@
+@import "reset.css";
+@import "status-bar.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import "header.css";
+@import "nav-bar.css";
+
+* {
+    box-sizing: border-box;
+    /* 화면 테두리에 맞추는듯? */
+}
+
+body{
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    color: inherit;
+    /* 링크 색깔 지우기 */
+}

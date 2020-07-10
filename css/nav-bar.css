@@ -1,0 +1,37 @@
+.nav {
+    position: fixed;
+    width: 100%;
+
+    /* fixed 속성은 width가 있어야 고정됨 */
+    padding: 20px 50px;
+    background-color: #fcfcfc;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid #f7f7f7;
+}
+.nav .nav__list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav i {
+    font-size: 20px;
+}
+.nav .nav__list-link{
+    position: relative;
+}
+.nav .nav__badge{
+    position: absolute;
+    font-size: 15px;
+    top:-7px;
+    right: -7px;
+    color: white;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
