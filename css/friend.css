@@ -5,8 +5,42 @@
 }
 .friend .friend__avartar{
     width: 50px;
-    border-radius: 35%;
+    border-radius: 38%;
 }
 .friend__avartar.g-avartar{
     width: 70px;
+}
+.friend__avartar.m-avartar{
+    width: 60px;
+}
+.friend .friend__column{
+    display: flex;
+    align-items: center;
+}
+
+.friend__column .friend__avartar{
+    margin-right: 15px;
+}
+.friend__content .friend__name{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+/* } 블럭 으로 아래위 나뉘는 정렬됨 */
+
+
+
+.friend__content .friend__bottom-text{
+    font-size: 16px;
+    
+}
+.friend__content .friend__status{
+    font-size: 12px;
+}
+
+.friend .chat__timestamp,
+.friend__content .friend__status, 
+.friend__content .friend__bottom-text{
+    font-size:12px;
+    opacity: 0.6;
 }
