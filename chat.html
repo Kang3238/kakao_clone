@@ -8,7 +8,8 @@
 
     <title>Chat</title>
 </head>
-<body>
+<body class="chats-body">
+<div class="header-wrapper">
     <div class="status-bar">
         <div class="status-bar__column">
             <span class="status-bar__clock">9:06</span>
@@ -21,6 +22,7 @@
             <i class="fas fa-battery-full"></i>
         </div>
     </div>
+
     <header class="header">
         <div class="header__header-column">
                 <a href="index.html" class="header__back-btn">
@@ -38,26 +40,49 @@
         </div>
     
     </header>
+</div>
+    
 
     <!-- status bar아래 화살표, 세팅 부분 -->
-    <main class="chat">
+    <main class="chat-screen">
         <ul class="chat__messages">
             <span class="chat__timestamp">금요일, 오후5시40분</span>
             <li class="incoming-message message">
                 <img src="images/avatar.jpg" class="g-avatar message avatar">
                 <div class="message__content">
-                    <span class="message__author">친구이름</span>
+                    
                     <div class="message__bubble">
-                        친구 텍스트 내용
+                        오빠 존멋!!
                     </div>
+                    <span class="message__author">서희</span>
                 </div>
                 <span class="message__timestamp"></span>
             </li>
-            <li class="incoming-message message">
+            <li class="sent-message message">
                 <span class="message__timestamp"></span>
                 <div class="message__content">
                     <div class="message__bubble">
-                        나의 텍스트 내용
+                        훗 나도 알쥐~
+                    </div>
+                </div>
+                
+            </li>
+            <li class="incoming-message message">
+                <img src="images/avatar.jpg" class="g-avatar message avatar">
+                <div class="message__content">
+                    
+                    <div class="message__bubble">
+                        좋~~덴다!!!
+                    </div>
+                    <span class="message__author">서희</span>
+                </div>
+                <span class="message__timestamp"></span>
+            </li>
+            <li class="sent-message message">
+                <span class="message__timestamp"></span>
+                <div class="message__content">
+                    <div class="message__bubble">
+                        이노무 쫘슥이!!
                     </div>
                 </div>
                 
@@ -65,16 +90,14 @@
         </ul>
 
     </main>
-    <div class="chat__write">
-        <div class="chat__write-column"><i class="far fa-plus-square"></i></div>
-        <div class="chat__write-column">
-            <input type="text" placeholder="Send message" class="chat__write-input">
-        </div>
-        <div class="chat__write-column">
-            <span class="chat__write-icon">
+    <div class="chat__write--container">
+        <input type="text" class="chat__write"placeholder="Send message" class="chat__write-input">
+        <div class="chat__icon-left chat__icon"><i class="far fa-plus-square"></i></div>
+        <div class="chat__icon-right chat__icon">
+            <span class="chat__write-icon ">
                 <i class="far fa-smile-wink"></i>
             </span>
-            <span class="chat__write-icon">
+            <span class="chat__write-icon ">
                 <i class="fas fa-microphone"></i>
             </span>
         </div>
