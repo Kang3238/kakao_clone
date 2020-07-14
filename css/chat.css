@@ -1,5 +1,6 @@
 .header-wrapper{
     background-color: white;
+    z-index: 2;
     padding: 5px 0;
     position: fixed;
     top: 0;
@@ -24,11 +25,64 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #f7f7f7;
-    padding: 5px 20px;
     
     
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+    width: 100%;
+    
+    
+}
+
+
+
+@keyframes incomingAim {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.incoming-message{
+    animation: incomingAim 0.8s ease-out forwards;
+}
+
+@keyframes sentgAim {
+    from{
+        opacity: 0;
+        transform: translateX(400px);
+
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.sent-message {
+    animation: sentgAim 0.8s ease-out forwards;
+}
+
+@keyframes float{
+    0%{
+        
+        box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    }
+    50%{
+        
+        box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    }
+    100%{
+        
+        box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    }
+    
 }
 
 .chat__write{
@@ -40,11 +94,14 @@ width: 100%;
 border: none;
 font-size: 14px;
 outline: none;
-
+transition: width .25s ease-in-out,border-radius .3s ease-in-out,
+transform .3s ease-in-out;
+margin: 0 auto;
 }
 
 .chat__icon-left{
     position: absolute;
+    left: 10px;
 }
 
 .chat__icon-right{
@@ -57,8 +114,14 @@ outline: none;
     font-size: 22px;
     margin-left: 10px;
 }
-.chat__write:focus{
+.chat__write:focus {
     outline: none;
+    width: 80%;
+    transform: translateY(-100px);
+    border-radius: 40px;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    animation: float 3s infinite forwards;
 }
 
 
@@ -135,7 +198,21 @@ outline: none;
     width: 30px;
     border-radius: 15px;
     margin-right: 15px;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    animation: spin 3s infinite;
+    
 }
+
+@keyframes spin{
+    form{
+        transform: none;
+    }
+    to{
+        transform: rotateY(1turn);
+    }
+}
+
 .sent-message{
     align-self: flex-end;
 }

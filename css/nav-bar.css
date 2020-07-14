@@ -5,9 +5,13 @@
     /* fixed 속성은 width가 있어야 고정됨 */
     padding: 20px 50px;
     background-color: #fcfcfc;
+    
     bottom: 0px;
     left: 0px;
     border-top: 1px solid #f7f7f7;
+    transform: translateY(80px);
+    animation: showNav 0.5s ease-out forwards;
+    animation-delay: 0.5s;
 }
 .nav .nav__list{
     display: flex;
@@ -34,4 +38,13 @@
     align-items: center;
     text-align: center;
     border-radius: 50%;
+}
+
+@keyframes showNav{
+    from{
+        transform: translateY(80px);
+    }
+    to{
+        transform: none;
+    }
 }

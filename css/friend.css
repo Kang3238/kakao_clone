@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px ;
 }
 .friend .friend__avartar{
     width: 50px;
@@ -20,6 +21,7 @@
 
 .friend__column .friend__avartar{
     margin-right: 15px;
+    width: 60px;
 }
 .friend__content .friend__name{
     display: block;
@@ -43,4 +45,19 @@
 .friend__content .friend__bottom-text{
     font-size:12px;
     opacity: 0.6;
+}
+
+.group-chat .m-avartar{
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+
+}
+.friend__column .group{
+    margin-right: 15px;
+    width: 60px;
+}
+.group .group-chat{
+    display: flex;
 }
